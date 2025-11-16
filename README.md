@@ -7,12 +7,14 @@ Now, on to the fun options.
 
 ## Sizes
 There are five different standard sizes for dominos:
-||#||Sample||Name||Size||
-|0| |Mini|30 x 14 x 5|
-|1| |Standard|48 x 24 x 6|
-|2| |Professional|50 x 25 x 10|
-|3| |Jumbo|50 x 25 x 13|
-|4| |Tounament|55 x 28 x 13|
+
+|#| Sample | Name | Size |
+| --- | --- | --- | --- |
+| 0 | | Mini | 30 x 14 x 5 |
+| 1 | | Standard | 48 x 24 x 6 |
+| 2 | | Professional | 50 x 25 x 10 |
+| 3 | | Jumbo | 50 x 25 x 13 |
+| 4 | | Tounament | 55 x 28 x 13 |
 
 In the Customizer: 
 + To set a custom size, select Custom from the Size dropdown and the enter your custom size in the CustomSize field.
@@ -119,18 +121,20 @@ If you do not have a multi-extruder printer, a prime tower will likely be added 
 ## Generated File Settings
 The following settings were used to generate the posted models.
 
-||Size||DividerDiameter||PipEdgeMargin||NumberSize||
-|Mini|2|1|7|
-|Standard|2.5|2|10|
-|Professional|2.5|2|10|
-|Jumbo|2.5|4|10|
-|Tournament|2.5|4|12|
+| Size | DividerDiameter | PipEdgeMargin | NumberSize |
+| --- | --- | --- | --- |
+| Mini | 2 | 1 | 7 |
+| Standard | 2.5 | 2 | 10 |
+| Professional | 2.5 | 2 | 10 |
+| Jumbo | 2.5 | 4 | 10 |
+| Tournament | 2.5 | 4 | 12 |
 
 NumberSize is related to the default font choice, Orbitron, which is the same for all sizes.
 
-||PipType||SamePipSize||
-|Divet|false|
-|Cutout|true|
+| PipType | SamePipSize |
+| --- | --- |
+| Divet | false |
+| Cutout | true |
 
 ## Printing
 
@@ -156,4 +160,4 @@ There are many amazing box models already online. I recommend printing your domi
 For Mexican Train, small tokens are required. These are usually miniture trains. Any minifig you find online can work. Why not try a mini benchy? A center hub is also required. I have a generator that matches the sizes here, available at ...
 
 ## License
-[Customizable Dominos](https://github.com/myname-random/dominos) © 2025 by [Morgan Conner](https://github.com/myname-random/) is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)![](https://mirrors.creativecommons.org/presskit/icons/cc.svg)![](https://mirrors.creativecommons.org/presskit/icons/by.svg)![](https://mirrors.creativecommons.org/presskit/icons/nc.svg)![](https://mirrors.creativecommons.org/presskit/icons/sa.svg)
+[Customizable Dominos](https://github.com/myname-random/dominos) © 2025 by [Morgan Conner](https://github.com/myname-random/) is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
