@@ -1,0 +1,53 @@
+{
+    "fileFormatVersion": "1",
+    "parameterSets": {
+        "New set 1": {
+            "BedSize": "[300, 300]",
+            "DominoSet": "9",
+            "Marking": "2",
+            "PipEdgeMargin": "4",
+            "PipShape": "1",
+            "PipType": "2",
+            "Size": "3"
+        },
+        "New set 2": {
+            "BedSize": "[340, 340]",
+            "CustomSize": "[0, 0, 0]",
+            "DividerDiameter": "2.5",
+            "DominoSet": "18",
+            "Layout": "3",
+            "Marking": "2",
+            "Number0": "",
+            "Number1": "1",
+            "Number10": "10",
+            "Number11": "11",
+            "Number12": "12",
+            "Number13": "13",
+            "Number14": "14",
+            "Number15": "15",
+            "Number16": "16",
+            "Number17": "17",
+            "Number18": "18",
+            "Number2": "2",
+            "Number3": "3",
+            "Number4": "4",
+            "Number5": "5",
+            "Number6": "6.",
+            "Number7": "7",
+            "Number8": "8",
+            "Number9": "9.",
+            "NumberFont": "Orbitron",
+            "NumberSet": "1",
+            "NumberSize": "12",
+            "PipEdgeMargin": "3",
+            "PipShape": "3",
+            "PipSpacing": "0.20000000000000001",
+            "PipType": "1",
+            "PlateSpacer": "20",
+            "SamePipSize": "true",
+            "Size": "3",
+            "TileSpacer": "4",
+            "cDepth": "1"
+        }
+    }
+}
