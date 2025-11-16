@@ -57,7 +57,7 @@ In the Customizer:
 ### Numerals
 With numerals, the numbers can be printed directly onto the tiles.
 
-By default the numeral setting uses Orbitron as the font.
+By default the numeral setting uses [Orbitron](https://github.com/theleagueof/orbitron) as the font.
 
 In the Customizer:
 + Use the NumberFont field to specify a font for the numerals
@@ -106,17 +106,39 @@ If you do not have a multi-extruder printer, a prime tower will likely be added 
 The most time consuming options is to paint the tiles in the slicer for the markings. Depending on your slicer, this is not a complicated process, but there are a of tiles and a lot of markings. Here is my recommended approach.
 
 The following assumes OrcaSlicer or similar (Bambu Slicer, Creality Print, Prusa Slicer, etc.).
-1. On the Prepare tab, select a tile and then select the Color Painting action
-2. Configure color painting as follows
-	1. Select the filament color you want to use for the paint
+
+For either of the below approaches, first import the model, split to objects, and then configure your print settings. A prime tower will likely be added by the slicer once you start coloring the tiles. Ensure adequeate space is available for the tiles and they do not overlap with the prime tower. Shift tiles to an alternate plate or adjust the prime tower settings as needed.
+
+_For Two Tone_
+1. On the Prepare tab, select all objects and change the filament to your desired **pip** color
+2. Select a domino and then select the Color Painting action
+3. Configure color painting as follows
+	1. Select the filament color you want to use for body of the tile
+	2. Select the Fill tool
+	3. Select/Enable Edge Detection
+    4. Select a Smart fill angle that will select the face of the domino, but not the pip
+		+ For the diamond and square pips, I've found 8 works well.
+		+ For round pips, 30 can be used. In this case, combine the following steps.
+4. Click each of the front faces on either side of the divider, then click the top and the bottom sides of the domino
+	+ If the smart angle value was correct, the front face should fill but not the pip
+	+ You can hold down Shift and click to remove a color if you click the wrong spot
+5. Change the Smart fill angle to something more generous, such as 30
+6. Click the back of the domino
+	+ If the smart angle value was correct, this should wrap around the rouneded sides and back to the front
+5. Repeat for each tile
+
+_For Multi-color_
+1. On the Prepare tab, select all objects and change the filament to your desired **body** color
+2. Select a domino and then select the Color Painting action
+3. Configure color painting as follows
+	1. Select the filament color you want to use for the left pips (or top pips depending on the orientation)
 	2. Select the Fill tool
 	3. Select/Enable Edge Detection
 	4. Select a Smart Fill angle that works, 30 is usually fine.  Go down to 10 if you want to be more granular
-3. As you move the mouse over the model, you'll see if automatically selects the pips and dividers.  Click each to paint it with the specified color.
+4. Click the walls of the pip to fill with your desired color
 	+ You can hold down Shift and click to remove a color if you click the wrong spot
-4. Repeat for each tile
-
-If you do not have a multi-extruder printer, a prime tower will likely be added by the slicer. Ensure adequeate space is available for the tiles and shift tiles to an alternate plate or adjust the prime tower settings as needed.
+6. Repeat steps 3 and 4 to color the divider and the right (or bottom) pips
+5. Repeat for each tile
 
 ## Generated File Settings
 The following settings were used to generate the posted models.
