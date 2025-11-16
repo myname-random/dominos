@@ -1,7 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Customizable Dominos
+// Customizable Dominos - https://github.com/myname-random/dominos/
 // © 2025 by Morgan Conner
-// Licensed under CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// Licensed under CC BY-NC-SA 4.0
+// To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/ 
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -25,7 +26,7 @@ cDepth = 1;
 /* [Layout] */
 
 // Optimizes layout for printing
-Layout = 2; // [1:Simple, 2:Grid - Flat, 3:Grid - Horizontal, 4:Grid - Vertical]
+Layout = 1; // [1:Simple, 2:Grid - Flat, 3:Grid - Horizontal, 4:Grid - Vertical]
 // Printer bed size, only used if a Grid layout is selected
 BedSize = [340,340]; // [100:1:800]
 // Space between each tile
@@ -35,9 +36,9 @@ PlateSpacer = 20;
 
 /* [If Pips] */
 
-// Divet is a small carve out. Cutout is a half height hole for an insert.
-PipType = 1; // [1:Divet, 2:Cutout]
-// Divets are rounded versions, Cutouts are square edged
+// Divet is a small carve out. Hole is a half height hole for an insert.
+PipType = 1; // [1:Divet, 2:Hole]
+// Divets are rounded versions, Holes are square edged
 PipShape = 1; // [1:Round, 2:Square, 3:Diamond]
 // Space between pips as a percentage of pip size
 PipSpacing = .2; //[.2:.01:1]
@@ -176,8 +177,8 @@ module dominoTile(left, right) {
                 zrot(180) pipDivet(right);
             } else {
                 // Pip Type 2, Cutout
-                pipCutout(left);
-                zrot(180) pipCutout(right);
+                pipHole(left);
+                zrot(180) pipHole(right);
             }
         } else {
             // Marking 2, Numerals
@@ -271,7 +272,7 @@ module pipDivet(pips) {
     }
 }
 
-module pipCutout(pips) {
+module pipHole(pips) {
     pipSize = pipSizes[pips];
     pipMap = pipMapping[pips];
     rowCount = len(pipMap);
