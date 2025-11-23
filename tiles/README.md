@@ -30,7 +30,7 @@ There are five different standard sizes for dominos:
 | Jumbo | 50 x 25 x 13 |
 | Tounament | 55 x 28 x 13 |
 
-![Two stacks of dominos in different orientations from smallest to largest size](/img/TileSizes.jpg "Tile Size Comparison")
+![Two stacks of dominos in different orientations from smallest to largest size](img/TileSizes.jpg "Tile Size Comparison")
 
 In the Customizer:
 
@@ -51,7 +51,7 @@ There are four different layouts for arranging the tiles:
 
 Edge rounding adjustments are made to support the tile orientation of each layout.
 
-![Three dominos each one printed with a different orientation](/img/Orientations.jpg "Print Orientations")
+![Three dominos each one printed with a different orientation](img/Orientations.jpg "Print Orientations")
 
 [!NOTE]
 OpenSCAD generates the entire set as one object. Once you import the model in the slicer, use "Split to Objects" to separate the tiles. Create the neccessary number of plates for the set size. Select the block of tiles for a plate and move it to that plate in the slicer.
@@ -71,7 +71,7 @@ The domino tiles can be marked using pips (dots) or numerals. There are differen
 Pips come in two types: divets and holes. _Divets_ are better if you are going to use the tiles bare, paint by hand, or paint in the slicer. _Holes_ are better if you are going to print pips separately and insert them into the tiles. See the Coloring section below for more on this topic.
 
 Pips come in three shapes: round, square, and diamond.
-![Three dominos with different pip shapes](/img/PipShapes.jpg "Pip Shapes")
+![Three dominos with different pip shapes](img/PipShapes.jpg "Pip Shapes")
 
 Pips are dynamically sized based on the number of pips on the tile and the size of the tile. 
 
@@ -84,7 +84,7 @@ In the Customizer:
 ### Numerals
 
 With numerals, the numbers can be printed directly onto the tiles.
-![Two dominos with numerals instead of pips. One is painted.](/img/Numerals.jpg "Numerals")
+![Two dominos with numerals instead of pips. One is painted.](img/Numerals.jpg "Numerals")
 
 By default the numeral setting uses Orbitron as the font.
 
@@ -108,7 +108,7 @@ There are several options available for coloring the pips or numerals.  They all
 
 Depending on the filament selected for the print, you may not need to color the markings on the dominos and can use them bare. Selecting a more matte filament would be beneficial as anything with a particularly glossy filament may be hard to easily differentiate.
 
-![Domino with round uncolored pips](/img/PipRound.jpg "Domino with Round Pips")
+![Domino with round uncolored pips](img/PipRound.jpg "Domino with Round Pips")
 
 ### Hand Painted
 
@@ -124,7 +124,7 @@ As an alternative to multicolor printing or hand painting, configure a set using
 
 Another option for coloring is to have one primary color for the body and an alternate color for all the pips and the divider. Using a layer swap will create a stripe of the alternate color on the exterior walls, but its very easy to configure and minimizes purge waste.
 
-![Two dominos with different styles of slicer based pip coloring](/img/ColoringMethods.jpg "Coloring Methods")
+![Two dominos with different styles of slicer based pip coloring](img/ColoringMethods.jpg "Coloring Methods")
 
 The following assumes OrcaSlicer or similar (Bambu Slicer, Creality Print, Prusa Slicer, etc.).
 
