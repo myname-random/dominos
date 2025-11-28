@@ -13,17 +13,23 @@ include <BOSL2/std.scad>
 $fa=$preview?1:.4;
 $fs=$preview?2:.4;
 
-//Sub Platform
+//Bottom Plate
 cuboid( [20, 7, 1], chamfer = 0.5, edges = [BOTTOM+FRONT, BOTTOM+BACK, LEFT]) {
+    // Central support to avoid slicer supports
+    attach(BOTTOM, TOP)
+        prismoid( size1 = [15, 2], size2 = [20, 6], h = 2.1) {
 
-    // Wheels
-    up(0.4) attach(BOTTOM, TOP) 
-        xcopies(n = 4, spacing = 4)
-            ycyl(d = 2.5, h = 8, rounding = 0.25);
+            // Wheels
+            xcopies(n=4, l=14) attach(BOTTOM, BOTTOM, inside=true) 
+                left(.2) yrot(9) ycyl(d = 2.5, h = 8, rounding = 0.25)
+                    attach(CENTER, CENTER, inside=true)
+                        ycyl(d=0.5, h=8.4, rounding=0.25);
+    }
 
-    // Wedge
-    down(0.55) left(5.5) xscale(0.35) 
-        attach(LEFT, "face1") 
+    // Pilot
+    down(0.55) right(1) 
+        attach(LEFT, "face1")
+            zscale(0.35) 
             rounded_prism(
                 regular_ngon(n = 3, side = 11), 
                 height = 4.1, 
@@ -31,23 +37,27 @@ cuboid( [20, 7, 1], chamfer = 0.5, edges = [BOTTOM+FRONT, BOTTOM+BACK, LEFT]) {
                 joint_sides = [2, 4, 4]
             );
 
-    // Base Wedge for printing to avoid supports
-    attach(BOTTOM, TOP)
-        prismoid( size1 = [18.2, 2], size2 = [20, 6], h = 2.1);
-
-    // Top Platform
+    // Top Plate
     attach(TOP, BOTTOM) 
         cuboid( [20, 8, 1], chamfer = 0.5, edges = [BOTTOM+FRONT, BOTTOM+BACK, LEFT]) {
 
-            // Boiler and stack
+            // Boiler
             down(1) attach(TOP, BOTTOM, align=LEFT) 
-                xcyl(d = 8, h = 12, rounding = 2) {
-                    down(0.45) attach(TOP, BOTTOM, align = LEFT, inset = 2)
-                        zcyl(d = 2, h = 3, rounding1 = -0.8) 
+                xcyl(d = 7, h = 14, rounding = 1) {
+                    // Smokebox door
+                    attach(LEFT, RIGHT) xcyl( d = 3, h = 0.3, rounding = 0.15);
+                    // Smokestack
+                    down(0.8) attach(TOP, BOTTOM, align = LEFT, inset = 2)
+                        zcyl(d = 3, h = 3, rounding1 = -0.5) 
                             attach(TOP, BOTTOM)
-                                zcyl(d1 = 2, d2 = 4, h = 2, rounding2 = 0.5);
+                                zcyl(d1 = 3, d2 = 5, h = 3, rounding2 = 0.8);
+                    // Safety valve
                     down(0.45) attach(TOP, BOTTOM, align = RIGHT, inset = 3)
-                        zcyl(d = 1.5, h = 2, rounding2 = 0.5);
+                        zcyl(d = 3, h = 2, rounding2 = 1);
+                        
+                    // Accents
+                    back(.2) attach(FRONT, BACK) xcyl( d = .4, h = 12, rounding = 0.1);
+                    fwd(.2) attach(BACK, FRONT) xcyl( d = .4, h = 12, rounding = 0.1);
                 }
 
             // Headlights
@@ -59,20 +69,20 @@ cuboid( [20, 7, 1], chamfer = 0.5, edges = [BOTTOM+FRONT, BOTTOM+BACK, LEFT]) {
             // Cab
             attach(TOP, BOTTOM, align = RIGHT, inset = 1)
                 diff()
-                cuboid([9, 8, 12], edges=[TOP+FRONT, TOP+BACK], rounding = 1.5) {
+                cuboid([7, 8, 12], edges=[TOP+FRONT, TOP+BACK], rounding = 1.5) {
                     // Cab Windows
                     tag("remove")
                     attach(RIGHT, RIGHT, align = BOTTOM, inside = true) 
-                        cuboid([0.5, 6, 10], edges = [TOP+FRONT, TOP+BACK, BOTTOM+FRONT, BOTTOM+BACK], rounding = 0.5);
+                        cuboid([0.8, 6, 10], edges = [TOP+FRONT, TOP+BACK, BOTTOM+FRONT, BOTTOM+BACK], rounding = 0.5);
                     tag("remove")
                     attach(LEFT, LEFT, align = TOP, inside = true, inset = 2)
-                        cuboid([0.5, 6, 2.5], edges = [TOP+FRONT, TOP+BACK, BOTTOM+FRONT, BOTTOM+BACK], rounding = 0.5);
+                        cuboid([0.8, 6, 2.5], edges = [TOP+FRONT, TOP+BACK, BOTTOM+FRONT, BOTTOM+BACK], rounding = 0.5);
                     tag("remove")
                     attach(FRONT, FRONT, align = TOP, inside = true, inset = 2)
-                        cuboid([7, 0.5, 5], edges = [TOP+LEFT, TOP+RIGHT, BOTTOM+LEFT, BOTTOM+RIGHT], rounding = 0.5);
+                        cuboid([5, 0.8, 5], edges = [TOP+LEFT, TOP+RIGHT, BOTTOM+LEFT, BOTTOM+RIGHT], rounding = 0.5);
                     tag("remove")
                     attach(BACK, BACK, align = TOP, inside = true, inset = 2)
-                        cuboid([7, 0.5, 5], edges = [TOP+LEFT, TOP+RIGHT, BOTTOM+LEFT, BOTTOM+RIGHT], rounding = 0.5);
+                        cuboid([5, 0.8, 5], edges = [TOP+LEFT, TOP+RIGHT, BOTTOM+LEFT, BOTTOM+RIGHT], rounding = 0.5);
                 }
         }
 }
