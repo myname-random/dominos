@@ -1,5 +1,5 @@
 # Customizable Dominos - Mexican Train Token
-![Train token](img/domino_train.jpg "Train Token")
+![Train token](img/train_token.jpg "Train Token")
 
 Simple, easy to print, train token for playing Mexican Train dominos.
 
