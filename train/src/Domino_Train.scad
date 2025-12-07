@@ -70,19 +70,21 @@ cuboid( [20, 7, 1], chamfer = 0.5, edges = [BOTTOM+FRONT, BOTTOM+BACK, LEFT]) {
             attach(TOP, BOTTOM, align = RIGHT, inset = 1)
                 diff()
                 cuboid([7, 8, 12], edges=[TOP+FRONT, TOP+BACK], rounding = 1.5) {
-                    // Cab Windows
+                    // Back Opening
                     tag("remove")
                     attach(RIGHT, RIGHT, align = BOTTOM, inside = true) 
-                        cuboid([0.8, 6, 10], edges = [TOP+FRONT, TOP+BACK, BOTTOM+FRONT, BOTTOM+BACK], rounding = 0.5);
+                        cuboid([0.8, 5, 10], edges = [TOP+FRONT, TOP+BACK], rounding = 0.5);
+                    // Front Window
                     tag("remove")
                     attach(LEFT, LEFT, align = TOP, inside = true, inset = 2)
-                        cuboid([0.8, 6, 2.5], edges = [TOP+FRONT, TOP+BACK, BOTTOM+FRONT, BOTTOM+BACK], rounding = 0.5);
+                        cuboid([0.8, 5, 3], edges = [TOP+FRONT, TOP+BACK, BOTTOM+FRONT, BOTTOM+BACK], rounding = 0.5);
+                    // Side Windows
                     tag("remove")
                     attach(FRONT, FRONT, align = TOP, inside = true, inset = 2)
-                        cuboid([5, 0.8, 5], edges = [TOP+LEFT, TOP+RIGHT, BOTTOM+LEFT, BOTTOM+RIGHT], rounding = 0.5);
+                        cuboid([4.5, 0.8, 5], edges = [TOP+LEFT, TOP+RIGHT, BOTTOM+LEFT, BOTTOM+RIGHT], rounding = 0.5);
                     tag("remove")
                     attach(BACK, BACK, align = TOP, inside = true, inset = 2)
-                        cuboid([5, 0.8, 5], edges = [TOP+LEFT, TOP+RIGHT, BOTTOM+LEFT, BOTTOM+RIGHT], rounding = 0.5);
+                        cuboid([4.5, 0.8, 5], edges = [TOP+LEFT, TOP+RIGHT, BOTTOM+LEFT, BOTTOM+RIGHT], rounding = 0.5);
                 }
         }
 }
