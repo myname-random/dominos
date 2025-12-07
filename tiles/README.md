@@ -252,7 +252,7 @@ The Customizable Dominos set includes the following components:
 
 Use some or all of the models to build a completely custom set or add extras to an existing set.
 
-The models are all available on my GitHub page as well as a number of profiles on MakerWorld, Creality Cloud, etc.
+The models are all available on my GitHub page as well as my profiles on MakerWorld, Creality Cloud, etc.
 
 ## License
 
