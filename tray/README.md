@@ -33,8 +33,8 @@ _Tiles_ specifies the number of domino tiles to fit per row.
 
 _Tile Orientation_ indicates whether you want the tiles to sit vertically or horizontally in the tray.
 
-[!NOTE]
-If you're unsure about the rest of the settings, generate a tray with 2 rows and 1 tile.  This will make a very small version that will let you test how the tile sits and how tile visibility is effected between rows. 
+> [!NOTE]
+> If you're unsure about the rest of the settings, generate a tray with 2 rows and 1 tile.  This will make a very small version that will let you test how the tile sits and how tile visibility is effected between rows. 
 
 ## Row Spacing
 
@@ -108,8 +108,8 @@ For the lightest weight, change the infill to Lightning and the infill percentag
 
 For a more dense and weighty tray, use Gyroid infill at 30-50%.
 
-[!NOTE]
-When printing a small test, print times and speed may be constrained by the printer's minimum layer time. When printing a number of full size trays, the printer should be able to use it's full speed.
+> [!NOTE]
+> When printing a small test, print times and speed may be constrained by the printer's minimum layer time. When printing a number of full size trays, the printer should be able to use it's full speed.
 
 ### Orientation
 
@@ -126,7 +126,7 @@ The Customizable Dominos set includes the following components:
 
 Use some or all of the models to build a completely custom set or add extras to an existing set.
 
-The models are all available on my GitHub page as well as a number of profiles on MakerWorld, Creality Cloud, etc.
+The models are all available on my GitHub page as well as my profiles on MakerWorld, Creality Cloud, etc.
 
 ## License
 

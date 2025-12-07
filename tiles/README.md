@@ -53,8 +53,8 @@ Edge rounding adjustments are made to support the tile orientation of each layou
 
 ![Three dominos each one printed with a different orientation](img/Orientations.jpg "Print Orientations")
 
-[!NOTE]
-OpenSCAD generates the entire set as one object. Once you import the model in the slicer, use "Split to Objects" to separate the tiles. Create the neccessary number of plates for the set size. Select the block of tiles for a plate and move it to that plate in the slicer.
+> [!NOTE]
+> OpenSCAD generates the entire set as one object. Once you import the model in the slicer, use "Split to Objects" to separate the tiles. Create the neccessary number of plates for the set size. Select the block of tiles for a plate and move it to that plate in the slicer.
 
 In the Customizer:
 
@@ -132,8 +132,8 @@ The following assumes OrcaSlicer or similar (Bambu Slicer, Creality Print, Prusa
 
 Download a file with the Grid - Flat layout, or generate a set using this layout. Open the model in your slicer. Arrange and configure as desired, then slice the model.
 
-[!IMPORTANT]
-A prime tower will likely be added by the slicer. Ensure adequate space is available for the tiles and shift tiles to an alternate plate or adjust the prime tower settings as needed.
+> [!IMPORTANT]
+> A prime tower will likely be added by the slicer. Ensure adequate space is available for the tiles and shift tiles to an alternate plate or adjust the prime tower settings as needed.
 
 _For Pips_
 
@@ -153,8 +153,8 @@ The following assumes OrcaSlicer or similar (Bambu Slicer, Creality Print, Prusa
 
 Download a file or generate a set using any of the layouts. Open the model in the slicer. Use “Split to Objects” to break each tile into a unique object. Arrange the tiles as desired and configure the print settings.
 
-[!IMPORTANT]
-A prime tower will likely be added by the slicer. Ensure adequate space is available for the tiles and shift tiles to an alternate plate or adjust the prime tower settings as needed.
+> [!IMPORTANT]
+> A prime tower will likely be added by the slicer. Ensure adequate space is available for the tiles and shift tiles to an alternate plate or adjust the prime tower settings as needed.
 
 _For two colors_
 
@@ -204,7 +204,7 @@ This is the most time consuming option. Map all the filament colors before you b
 
 The following settings were used to generate the posted models.
 
-| Size | DividerDiameter | PipEdgeMargin | NumberSize[^1] |
+| Size | DividerDiameter | PipEdgeMargin | NumberSize |
 | --- | --- | --- | --- |
 | Mini | 2 | 1 | 6 |
 | Standard | 2.5 | 2 | 10 |
@@ -212,7 +212,8 @@ The following settings were used to generate the posted models.
 | Jumbo | 2.5 | 4 | 10 |
 | Tournament | 2.5 | 4 | 12 |
 
-[^1]: This NumberSize value may only be correct for the default font choice. Changing the font will require adjusting the NumberSize value.
+> [!NOTE]
+> This NumberSize value may only be correct for the default font choice. Changing the font will require adjusting the NumberSize value.
 
 | PipType | SamePipSize |
 | --- | --- |
